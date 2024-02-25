@@ -23,6 +23,7 @@ function draw() {
   fill(255);
   background(0, 10);
 
+
   //ellipse(100, bY, 20, 20); //this will display the ball
   text("s", 100, bY + 30);
   bY = bY + 1; 
@@ -38,6 +39,7 @@ function draw() {
   //ellipse(200, fY, 20, 20);
   text("d", 160, fY + 30);
   fY = fY + 1; 
+
 
   if(bY > height) //this determine the ball to reset once it hits the bottom
   {
