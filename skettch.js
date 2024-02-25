@@ -1,5 +1,6 @@
 var start = document.getElementById("start");
 var game = document.getElementById("game"); 
+var sound = new Audio('mixkit-retro-game-notification-212.wav');
 
 start.addEventListener("click", function(){
   start.style.display = "none"; 
@@ -23,7 +24,6 @@ function draw() {
   fill(255);
   background(0, 10);
 
-
   //ellipse(100, bY, 20, 20); //this will display the ball
   text("s", 100, bY + 30);
   bY = bY + 1; 
@@ -39,7 +39,6 @@ function draw() {
   //ellipse(200, fY, 20, 20);
   text("d", 160, fY + 30);
   fY = fY + 1; 
-
 
   if(bY > height) //this determine the ball to reset once it hits the bottom
   {
@@ -71,19 +70,23 @@ function draw() {
 function keyPressed() {
   if (key == 's' && bY > 350) {
     score = score + 25;
+    sound.play(); //play sound
     bY = 0; //this will reset the ball after player press the key 
   }
   if (key == 'a' && aY > 350) {
     score = score + 25;
     aY = 0;
+    sound.play();
   }
   if (key == 'w' && dY > 350) {
     score = score + 25;
     dY = 0;
+    sound.play();
   }
   if (key == 'd' && fY > 350) {
     score = score + 25;
     fY = 0;
+    sound.play();
   }
 }
 
