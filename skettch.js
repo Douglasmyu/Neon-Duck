@@ -14,13 +14,13 @@ function draw() {
   ellipse(100, bY, 20, 20); //this will display the ball
   bY = bY + 5; 
 
-  ellipse(200, aY, 20, 20);
+  ellipse(175, aY, 20, 20);
   aY = aY +5; 
 
-  ellipse(100, dY, 20, 20); //this will display the ball
+  ellipse(250, dY, 20, 20); //this will display the ball
   dY = dY + 5; 
 
-  ellipse(200, fY, 20, 20);
+  ellipse(325, fY, 20, 20);
   fY = fY +5; 
 
   if(bY > height) //this determine the ball to reset once it hits the bottom
